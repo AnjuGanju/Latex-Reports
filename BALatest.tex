@@ -1,0 +1,304 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11.5pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+%%\usepackage{sectsty}
+
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.94]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{\huge Anjali}{Singh}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+ \par}
+  
+ \newcommand*{\customcvaward}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+   {\normalfont #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+%\ifx&#4&%
+ %\else{\\%}
+  %\begin{minipage}{\textwidth}%
+    %\small#4%
+   %\end{minipage}}\fi%
+   }
+%  \par\addvspace{#1}}
+  
+
+\setlength{\tabcolsep}{5pt}
+
+\makeatletter
+\RenewDocumentCommand{\section}{sm}{%
+  \par\addvspace{2.5ex}%
+  \phantomsection{}% reset the anchor for hyperrefs
+  \addcontentsline{toc}{section}{#2}%
+  {\strut\sectionstyle{#2}}%
+  \par\nobreak\addvspace{1ex}\@afterheading}% to avoid a pagebreak after the heading
+\makeatother
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-19mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+   206-953-0730  | asingh93@uw.edu | linkedin.com/in/anjali-singh93 | https://github.com/AnjuGanju | Seattle, WA \\  
+\hline
+\vspace*{-7mm}
+\end{tabular}
+\end{center}
+%\vspace*{-2mm}
+
+%\hline
+
+\section{\large SUMMARY}
+
+\vspace{-1mm} 
+\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+\item Three years of industry experience in managing and delivering large scale projects using Agile methodology
+ \item \textbf{Data Analytics:} SQL, R, Tableau, MS Access, MS Excel, Power BI, Splunk, Python
+ \item \textbf{Tools:} Oracle Cloud, Azure, AWS, MS Visio, MS Office, MS Sharepoint, JIRA, HP ALM, Workday, Kali Linux, nmap
+ \item Change Management, Requirement Gathering, Business Analysis, Project Management, Regression Analysis
+ \item Waterfall, Kanban, SCRUM
+ \end{itemize}
+ \vspace{-3mm} 
+
+\section{\large EDUCATION}
+
+%\vspace{-1mm} 
+
+\textbf{MS\quad\quad Information Management\quad\quad University of Washington, Seattle\quad\quad GPA: 3.94/4.0\quad\,\, Jun 2020 (Expected)\\}
+\textbf{BE\quad\quad\,\,Electronics Engineering\quad\quad\quad University of Mumbai, India\quad\quad\quad\quad GPA: 3.74/4.0 \quad\quad\quad\quad\quad\,\,\, Jun 2015\\}
+ \vspace{-8mm} 
+
+\section{\large EXPERIENCE}
+
+\vspace{-1mm} 
+{\customcventry{Sept 2019 - Present}{Reporting Analyst}{University of Washington, Integrated Service Center}{}{}
+{\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+\item Spearheading initiative to understand time taken for an individual task within HCM business process to identify and optimize latency issues.
+\item Creating multiple calculated/complex fields to estimate time taken by an individual process eliminating holidays \& weekends.
+\end{itemize}
+}
+}
+
+\vspace{-5mm} 
+{\customcventry{Jun 2019 – Sept 2019}{Business Intelligence Analyst Intern}{}{}{}
+{\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+\item Led efforts for creating/updating metrics to increase Workday adoption, customer satisfaction and user efficiency.
+\item Managed of Tableau Server for the Integrated Service Center team at the University. 
+\end{itemize}
+}
+}
+
+
+\begin{flushleft}
+\vspace{-7mm} 
+{\customcventry{Apr 2019 – Jun 2019}{Data Vizualization Analyst}{}{}{}
+{\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+\item Created interactive dashboards using Tableau for analysis of HR business processes ensuring solution driven, compelling, and well-organized views and data source management. 
+\item Designed/built reports in Workday for employees establishing security to eliminate the risk of revealing PII, PHI data.
+\end{itemize}}
+}
+\end{flushleft}
+
+
+
+ \vspace{-2.5mm} 
+{\customcventry{Jun 2018 - Sep 2018}{Advisory Solution Advisor}{Deloitte Advisory, Bengaluru, IN}{}{}
+{\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+\item Led Security offshore team for Enterprise Application/ERP Implementation for a manufacturing company.
+\item Generated BI reports using Tableau and R with KPI risks, including security assessment reports, system security plans.
+\item Partnered with business \& tech teams to prioritize requests and delivered excellent results against time-sensitive priorities.
+\end{itemize}}
+}
+
+
+\begin{flushleft}
+ \vspace{-7mm} 
+{\customcventry{Jun 2017 - Jun 2018}{Advisory Associate Solution Advisor}{}{}{}
+{\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item Led Security offshore team for ERP Implementation for a financial firm.
+    \item Led the Incident response team with an accuracy of 95\% of incidents solved within the given SLA(Service Level Agreement).
+    \item Developed business architecture using requirements and processes through requirement elicitation process.
+\end{itemize}}
+}
+\end{flushleft}
+
+\begin{flushleft}
+ \vspace{-7mm} 
+{\customcventry{Jun 2015 - Jun 2017}{Business Technology Analyst}{}{}{}
+{\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item Implemented of Security \& Controls for ERP for a public university in New Jersey. 
+    \item Documented business and technical process surrounding user access, segregation of duties, provisioning \& identity management.
+\end{itemize}}
+}
+\end{flushleft}
+
+\section{\large ACADEMIC PROJECTS}
+
+\vspace{-1mm} 
+{\customcvproject{Toxicity for multiple myeloma Cancer\normalfont(Python, Machine Learning) }{Mar 2019 - Jun 2019}
+  {\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item Cleaned and analyzed dataset for multiple myeloma cancer patients.
+\item Performed PCA and data imputation for feature/dimensionality reduction and feature scaling for prediction of toxicity.
+  \end{itemize}
+  }
+}
+
+\vspace{1mm} 
+{\customcvproject{IPL Exploratory Data Analysis\normalfont(Python, EDA) }{Jan 2019 - Mar-2019}
+  {\begin{itemize} 
+\renewcommand{\labelitemi}{$\bullet$}
+    \item Analyzed IPL data over 10 years to understand team performance, toss advantage, purple cap \& orange cap player analysis.
+    \item Visualized trends and patterns for select outcomes like strike rate, run rate for bowlers and batsmen.
+  \end{itemize}
+  }
+}
+\vspace{1mm} 
+{\customcvproject{Security Roadmap \normalfont(SEIM, Consulting, SWOT) }{Jan 2019 - Mar 2019}
+  {\begin{itemize} 
+\renewcommand{\labelitemi}{$\bullet$}
+    \item Designed a 3-year security strategy and roadmap for GreenCloud, a medium scaled company.
+    \item Performed risk assessment, security architecture, security budget for GreenCloud.
+  \end{itemize}
+  }
+}
+
+\vspace{1mm} 
+{\customcvproject{SuperStore \normalfont(Database Design, SQL Server, Tableau) }{Apr 2019 - Jun 2019}
+  {\begin{itemize}
+\renewcommand{\labelitemi}{$\bullet$}
+    \item Designed and programmed a database system to support operational and reporting needs for an manufacturing company.
+\item Developed artifacts like ER Diagram, Nested Stored procedures and Business rules to manage daily operational activities.
+\item Built synthetic transaction wrappers on production stored procedures to validate throughput volume of 100,000+ transactions.
+%\item Visualized the trends in stores, customers, product popularity of products using Tableau
+  \end{itemize}
+  }
+}
+
+
+\section{\large AWARDS AND HONORS}
+
+ \vspace{-2mm} 
+{\customcvaward{Client Appreciation Award \normalfont(Deloitte)}  {Sep 2017}\\}\\
+{\customcvaward{Applause Award \normalfont(Deloitte)}{March 2017}\\}\\
+{\customcvaward{Spot Award \normalfont(Deloitte) }{June 2017, May 2017, Feb 2017, Sep 2016}\\}\\
+
+  
+  
+%
+% \vspace{-1mm}
+%\section{\large AWARDS AND HONORS}
+ %\vspace{-2mm} 
+%{\customcvproject{Toastmasters International \normalfont - President at JPMC Powai Toastmasters Club}{}
+ % {\begin{itemize} 
+   % \item Led a team of 10 club officers to design and implement communication and leadership programs for over 150 members
+    %\item Introduced the concept of an 'Idea Lab' to foster innovation and collaborate with Toastmasters clubs around the globe
+  %\end{itemize}
+  %}
+%}
+
+
+
+\end{document}
